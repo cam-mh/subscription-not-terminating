@@ -1,0 +1,12 @@
+supergraph:
+  listen: "0.0.0.0:8000"
+  path: /graphql
+
+subscription:
+  enabled: true
+  mode:
+    passthrough:
+      subgraphs:
+        simple-strawberry-service:
+          path: /graphql
+          protocol: graphql_transport_ws
