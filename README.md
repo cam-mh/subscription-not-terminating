@@ -1,4 +1,4 @@
-On Apollo Router 2.4.0, when a client closed a subscription connection with the Router, the Router would then send a `connection_terminate` message to a subgraph, which could handle it, and clean up any resources.
+On Apollo Router 2.4.0, when a client closed a subscription connection with the Router, the Router would then send a `connection_terminate` message to a subgraph over a web socket, which could handle it, and clean up any resources.
 
 On 2.5.0, when a client closes a subscription connection with the Router, the Router doesn't send the `connection_terminate` message over the websocket to the subgraph.
 
